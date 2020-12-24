@@ -1,0 +1,31 @@
+{
+    "name": "wenstionly/cache-token",
+    "description": "A token guard driver for laravel framework using independent cache system instead of databases.",
+    "keywords": ["laravel","cache","token","driver"],
+    "license": "MIT",
+    "require": {
+        "laravel/framework": "^6.0|^7.0|^8.0",
+        "jenssegers/agent": "^2.6"
+    },
+    "authors": [
+        {
+            "name": "李健",
+            "email": "iplusuceo@126.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Wenstionly\\CacheToken\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wenstionly\\CacheToken\\CacheTokenProvider"
+            ],
+            "aliases": {
+                "AuthToken": "CacheToken"
+            }
+        }
+    }
+}
